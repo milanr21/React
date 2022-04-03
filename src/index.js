@@ -17,32 +17,39 @@
 //   document.getElementById("root")
 // );
 
+// import React from "react";
+// import ReactDom from "react-dom";
+
+// const customColor = {
+//   color: ""
+// };
+
+// const d = new Date(2019, 3, 11, 21);
+// const hr = d.getHours();
+
+// let greeting;
+
+// if (hr < 12) {
+//   greeting = "Good Morning";
+//   customColor.color = "red";
+// } else if (hr < 18) {
+//   greeting = "Good Afternoon";
+//   customColor.color = "green";
+// } else {
+//   greeting = "Good Night";
+//   customColor.color = "blue";
+// }
+
+// ReactDom.render(
+//   <h1 style={customColor} className="heading">
+//     {greeting}
+//   </h1>,
+//   document.getElementById("root")
+// );
+
 import React from "react";
 import ReactDom from "react-dom";
 
-const customColor = {
-  color: ""
-};
+import App from "./components/App";
 
-const d = new Date(2019, 3, 11, 21);
-const hr = d.getHours();
-
-let greeting;
-
-if (hr < 12) {
-  greeting = "Good Morning";
-  customColor.color = "red";
-} else if (hr < 18) {
-  greeting = "Good Afternoon";
-  customColor.color = "green";
-} else {
-  greeting = "Good Night";
-  customColor.color = "blue";
-}
-
-ReactDom.render(
-  <h1 style={customColor} className="heading">
-    {greeting}
-  </h1>,
-  document.getElementById("root")
-);
+ReactDom.render(<App />, document.getElementById("root"));
