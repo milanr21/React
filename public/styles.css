@@ -1,0 +1,13 @@
+.heading {
+  color: red;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  cursor: pointer;
+}
+
+.heading:hover {
+  border: 1px solid rgb(239, 167, 167);
+  padding: 8px;
+  background-color: rgb(239, 167, 167);
+}
