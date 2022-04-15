@@ -1,48 +1,19 @@
-// import React from "react";
-// import ReactDom from "react-dom";
-
-// const customStyle = {
-//   color: "red",
-//   textAlign: "center",
-//   fontSize: "35px",
-//   textTransform: "uppercase",
-//   letterSpacing: "3px",
-//   border: "1px solid red"
-// };
-
-// customStyle.color = "green";
-
-// ReactDom.render(
-//   <h1 style={customStyle}>Hello World!</h1>,
-//   document.getElementById("root")
-// );
-
 import React from "react";
 import ReactDom from "react-dom";
+import App from "./components/App";
 
-const customColor = {
-  color: ""
-};
+ReactDom.render(<App />, document.getElementById("root"));
 
-const d = new Date(2019, 3, 11, 21);
-const hr = d.getHours();
+//2. Create a App.jsx component.
+//3. Create a Header.jsx component that renders a <header> element
+//to show the Keeper App name in an <h1>.
 
-let greeting;
+//4. Create a Footer.jsx component that renders a <footer> element
 
-if (hr < 12) {
-  greeting = "Good Morning";
-  customColor.color = "red";
-} else if (hr < 18) {
-  greeting = "Good Afternoon";
-  customColor.color = "green";
-} else {
-  greeting = "Good Night";
-  customColor.color = "blue";
-}
+//to show a copyright message in a <p> with a dynamically updated year.
+//5. Create a Note.jsx component to show a <div> element with a
+//<h1> for a title and a <p> for the content.
+//6. Make sure that the final website is styled like the example shown here:
+//https://l1pp6.csb.app/
 
-ReactDom.render(
-  <h1 style={customColor} className="heading">
-    {greeting}
-  </h1>,
-  document.getElementById("root")
-);
+//HINT: You will need to study the classes in teh styles.css file to appy styling.
