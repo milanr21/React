@@ -1,48 +1,60 @@
-// import React from "react";
-// import ReactDom from "react-dom";
+// var numbers = [3, 56, 2, 48, 5];
 
-// const customStyle = {
-//   color: "red",
-//   textAlign: "center",
-//   fontSize: "35px",
-//   textTransform: "uppercase",
-//   letterSpacing: "3px",
-//   border: "1px solid red"
-// };
+// //Map -Create a new array by doing something with each item in an array.
 
-// customStyle.color = "green";
+// const newNumbers = numbers.map(function (x) {
+//   return x * 3;
+// });
 
-// ReactDom.render(
-//   <h1 style={customStyle}>Hello World!</h1>,
-//   document.getElementById("root")
-// );
+// console.log(newNumbers);
 
-import React from "react";
-import ReactDom from "react-dom";
+//Filter - Create a new array by keeping the items that return true.
 
-const customColor = {
-  color: ""
-};
+// var number1 = [3, 56, 2, 48, 5];
 
-const d = new Date(2019, 3, 11, 21);
-const hr = d.getHours();
+// const filternumber = number1.filter(function (num) {
+//   return num > 5;
+// });
 
-let greeting;
+// console.log(filternumber);
 
-if (hr < 12) {
-  greeting = "Good Morning";
-  customColor.color = "red";
-} else if (hr < 18) {
-  greeting = "Good Afternoon";
-  customColor.color = "green";
-} else {
-  greeting = "Good Night";
-  customColor.color = "blue";
-}
+//Reduce - Accumulate a value by doing something to each item in an array.
 
-ReactDom.render(
-  <h1 style={customColor} className="heading">
-    {greeting}
-  </h1>,
-  document.getElementById("root")
+// var number1 = [3, 56, 2, 48, 5];
+
+// var newNumbers = number1.reduce(function (accumulator, currentNumber) {
+//   console.log("accumulator = " + accumulator);
+//   console.log("currentNumber = " + currentNumber);
+
+//   return accumulator + currentNumber;
+// });
+
+// console.log(newNumbers);
+
+//Find - find the first item that matches from an array.
+
+// var number1 = [3, 5, 12, 48, 5];
+
+// const newNumbers = number1.find(function (num) {
+//   return num > 10;
+// });
+
+// console.log(newNumbers);
+
+//FindIndex - find the index of the first item that matches.
+
+// var numbers = [1, 7, 11, 26, 54];
+
+// const IndexofNumber = numbers.findIndex(function (num) {
+//   return num > 10;
+// });
+
+// console.log(IndexofNumber);
+
+import emojipedia from "./emojipedia";
+
+const emojiterm = emojipedia.map((meanings) =>
+  meanings.meaning.substring(0, 100)
 );
+
+console.log(emojiterm);
