@@ -1,48 +1,70 @@
-// import React from "react";
-// import ReactDom from "react-dom";
+// import animals, { useAnimals } from "./data";
 
-// const customStyle = {
-//   color: "red",
-//   textAlign: "center",
-//   fontSize: "35px",
-//   textTransform: "uppercase",
-//   letterSpacing: "3px",
-//   border: "1px solid red"
-// };
+// console.log(animals);
 
-// customStyle.color = "green";
+// const [cat, dog] = animals;
 
-// ReactDom.render(
-//   <h1 style={customStyle}>Hello World!</h1>,
-//   document.getElementById("root")
-// );
+// console.log(cat);
 
+// const { name: catName, sound: catSound } = dog;
+
+// console.log(catName);
+
+// const { name = "tiger", sound = "bhoww" } = cat;
+
+// console.log(sound);
+
+// const {
+//   name,
+//   sound,
+//   feedingRequirements: { food, water }
+// } = cat;
+
+// console.log(food);
+
+// const [animal, makeSound] = useAnimals(cat);
+
+// makeSound();
+
+// CHALLENGE: uncomment the code below and see the car stats rendered
 import React from "react";
-import ReactDom from "react-dom";
+import ReactDOM from "react-dom";
+import cars from "./practice";
 
-const customColor = {
-  color: ""
-};
+const [honda, tesla] = cars;
 
-const d = new Date(2019, 3, 11, 21);
-const hr = d.getHours();
+const {
+  speedStats: { topSpeed: hondaTopSpeed }
+} = honda;
 
-let greeting;
+const {
+  speedStats: { topSpeed: teslaTopSpeed }
+} = tesla;
 
-if (hr < 12) {
-  greeting = "Good Morning";
-  customColor.color = "red";
-} else if (hr < 18) {
-  greeting = "Good Afternoon";
-  customColor.color = "green";
-} else {
-  greeting = "Good Night";
-  customColor.color = "blue";
-}
+const {
+  coloursByPopularity: [hondaTopColour]
+} = honda;
 
-ReactDom.render(
-  <h1 style={customColor} className="heading">
-    {greeting}
-  </h1>,
+const {
+  coloursByPopularity: [teslaTopColour]
+} = tesla;
+
+ReactDOM.render(
+  <table>
+    <tr>
+      <th>Brand</th>
+      <th>Top Speed</th>
+    </tr>
+    <tr>
+      <td>{tesla.model}</td>
+      <td>{teslaTopSpeed}</td>
+      <td>{teslaTopColour}</td>
+    </tr>
+    <tr>
+      <td>{honda.model}</td>
+      <td>{hondaTopSpeed}</td>
+      <td>{hondaTopColour}</td>
+    </tr>
+  </table>,
   document.getElementById("root")
 );
